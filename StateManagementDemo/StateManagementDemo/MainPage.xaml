@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:StateManagementDemo"
+             x:Class="StateManagementDemo.MainPage">
+
+    <StackLayout x:Name="layoutWrap" VerticalOptions="FillAndExpand"
+                      HorizontalOptions="FillAndExpand">
+
+        <local:StateContainer State="{Binding State}">
+
+            <local:StateCondition Is="Loaded">
+
+                <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+
+                    <Label FontAttributes="Bold" Text="This should be centered both vertically and horizontally."  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+                </StackLayout>
+            </local:StateCondition>
+        </local:StateContainer>
+    </StackLayout>
+</ContentPage>

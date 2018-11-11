@@ -4,6 +4,11 @@ namespace StateManagementDemo
 {
     public class MainPageViewModel : BaseViewModel
     {
+        public MainPageViewModel()
+        {
+            State = eState.Loaded;
+        }
+
         private eState _state;
 
         public eState State
